@@ -1,0 +1,27 @@
+Actividad:
+    
+    
+Atención médica:
+Crear un proyecto.
+Crear clase Principal --> main
+Crear clase Paciente --> metodo FichaConsulta
+ 
+Atributos: Rut, Dv, Nombre, Apellido, seguro de salud(Fonasa o Isapre), 
+
+si es Isapre, debe ingresar el nombre de una de ellas, las que son :
+    isapre1, isapre2, masIsapre, SuperIsapre(validar que ingrese solo estas).
+ 
+Menú:
+Opción 1: Ingreso de datos del paciente.
+Opción 2: Ingreso de la consulta(síntomas), diagnóstico médico, 
+remedios y/o examen a tomar.
+Opción 3: Mostrar los datos del paciente y el contenido 
+final de la consulta (síntomas, diagnostico, remedios y/o examen.
+Opcion 4: Salir.
+ 
+Los remedios y/o examen solo deben aparecer si tiene información ingresada.
+ 
+ 
+Validar las opciones del menu y señalar al usuario que ingrese correctamente
+la opción.
+Si ingresa mal la isapre, deberá devolver al usuario al menú principal.

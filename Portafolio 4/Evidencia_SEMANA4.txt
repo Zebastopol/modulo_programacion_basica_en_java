@@ -1,0 +1,45 @@
+ //*
+ 
+Crear un proyecto.
+Crear la clase Principal.
+Crear una clase Cliente. (atributos, constructores, g & s y metodo evaluarCredito
+ 
+Obtener crédito bancario: Un cliente de un banco requiere solicitar un crédito de consumo para sus gastos personales. 
+ 
+El banco evalúa al cliente y determina si cumple con los requisitos para el otorgamiento del crédito. Además, determina el monto máximo que le otorgará. 
+ 
+El cliente debe cumplir con los siguientes requisitos:
+1.         El monto mínimo del crédito es de $500.000.
+2.         El plazo de cuotas es desde 3 a 84 cuotas.
+3.         Cumplir con rangos de edad entre 24 y 79 años.
+4.         Presentar nacionalidad chilena.
+5.         El sueldo mínimo debe ser de $250.000.
+6.         Presentar antigüedad laboral, mínimo 3 años.
+7.         No presentar morosidades.
+ 
+Una vez aprobados todos los requisitos, el banco entrega un monto máximo de 10 veces el sueldo del cliente.
+ 
+La tasa de interés mensual es de 1,46 %.
+ 
+De acuerdo a los datos entregados, desarrolle un programa que permita determinar si el cliente cumple o no los requisitos del crédito. 
+ 
+Si los cumple debe mostrar los datos del cliente, el monto máximo que le otorgará el banco, el monto solicitado, la tasa mensual, la cantidad de cuotas y el valor total que pagará al final el cliente considerando las cuotas y el interés mensual.
+ 
+Se debe visualizar de la siguiente manera:
+--------------------------------------------------------
+    JUAN PEREZ     10.200.300-K
+--------------------------------------------------------
+Cumple con los requisitos
+Sueldo: $500.000
+Monto Máximo: $5.000.000
+Monto Solicitado: $4.000.000
+Tasa Mensual: 1,46%
+Cuotas: 12
+Monto a Pagar: $5.840.000
+ 
+Si no Cumple los requisitos se debe mostrar:
+--------------------------------------------------------
+    JUAN PEREZ     10.200.300-K
+--------------------------------------------------------
+No cumple con los requisitos
+*//

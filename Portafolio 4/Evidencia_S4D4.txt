@@ -1,0 +1,216 @@
+                // Actividad:
+                /*
+                 * Crear un menu de 3 opciones
+                 * 1.- ingresar un cliente (temporal) - 1 objeto
+                 * 2.- mostrar si se aprueba o no el crédito
+                 * 3.- salir menú.
+                 */
+
+
+Crear un proyecto.
+Crear clase Principal --> main
+Crear clase Cliente --> metodo evaluarCredito
+
+Obtener crédito bancario: Un cliente de un banco requiere solicitar un crédito de consumo para sus gastos personales.
+
+El banco evalúa al cliente y determina si cumple con los requisitos para el otorgamiento del crédito. Además, determina el monto máximo que le otorgará.
+
+El cliente debe cumplir con los siguientes requisitos:
+1. El monto mínimo del crédito es de $500.000.
+2. El plazo de cuotas es desde 3 a 84 cuotas.
+3. Cumplir con rangos de edad entre 24 y 79 años.
+4. Presentar nacionalidad chilena.
+5. El sueldo mínimo debe ser de $250.000.
+6. Presentar antigüedad laboral, mínimo 3 años.
+7. No presentar morosidades.
+
+Una vez aprobados todos los requisitos, el banco entrega un monto máximo de 10 veces el sueldo del cliente.
+
+La tasa de interés mensual es de 1,46 %.
+
+De acuerdo a los datos entregados, desarrolle un programa que permita determinar si el cliente cumple o no los requisitos del crédito.
+
+Si los cumple debe mostrar los datos del cliente, el monto máximo que le otorgará el banco, el monto solicitado, la tasa mensual, la cantidad de cuotas y el valor total que pagará al final el cliente considerando las cuotas y el interés mensual.
+
+Se debe visualizar de la siguiente manera:
+--------------------------------------------------------
+JUAN PEREZ 10.200.300-K
+--------------------------------------------------------
+Cumple con los requisitos
+Sueldo: $500.000
+Monto Máximo: $5.000.000
+Monto Solicitado: $4.000.000
+Tasa Mensual: 1,46%
+Cuotas: 12
+Monto a Pagar: $5.840.000 (monto solicitado * Tasa)
+
+Si no Cumple los requisitos se debe mostrar:
+--------------------------------------------------------
+JUAN PEREZ 10.200.300-K
+--------------------------------------------------------
+No cumple con los requisitos
+
+
+
+
+
+****************************
+
+
+public class Cliente {        
+        private int rut;
+        private char dv;
+        private String nombre;
+        private String apellido;
+        private int montoCredito;
+        private int cuotas;
+        private int edad;
+        private boolean esChilena;
+        private int sueldo;
+        private int antiguedadLaboral;
+        private boolean morosidad;
+        
+        
+        public Cliente() {
+                this.rut = 0;
+                this.dv = ' ';
+                this.nombre = "";
+                this.apellido = "";
+                this.montoCredito = 0;
+                this.cuotas = 0;
+                this.edad = 0;
+                this.esChilena = false;
+                this.sueldo = 0;
+                this.antiguedadLaboral = 0;
+                this.morosidad = false;
+        }
+        public Cliente(int rut, char dv, String nombre, String apellido, int montoCredito, int cuotas, int edad,
+                        boolean esChilena, int sueldo, int antiguedadLaboral, boolean morosidad) {
+                super();
+                this.rut = rut;
+                this.dv = dv;
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.montoCredito = montoCredito;
+                this.cuotas = cuotas;
+                this.edad = edad;
+                this.esChilena = esChilena;
+                this.sueldo = sueldo;
+                this.antiguedadLaboral = antiguedadLaboral;
+                this.morosidad = morosidad;
+        }
+        
+        public int getRut() {
+                return rut;
+        }
+        public void setRut(int rut) {
+                this.rut = rut;
+        }
+        public char getDv() {
+                return dv;
+        }
+        public void setDv(char dv) {
+                this.dv = dv;
+        }
+        public String getNombre() {
+                return nombre;
+        }
+        public void setNombre(String nombre) {
+                this.nombre = nombre;
+        }
+        public String getApellido() {
+                return apellido;
+        }
+        public void setApellido(String apellido) {
+                this.apellido = apellido;
+        }
+        public int getMontoCredito() {
+                return montoCredito;
+        }
+        public void setMontoCredito(int montoCredito) {
+                this.montoCredito = montoCredito;
+        }
+        public int getCuotas() {
+                return cuotas;
+        }
+        public void setCuotas(int cuotas) {
+                this.cuotas = cuotas;
+        }
+        public int getEdad() {
+                return edad;
+        }
+        public void setEdad(int edad) {
+                this.edad = edad;
+        }
+        public boolean isEsChilena() {
+                return esChilena;
+        }
+        public void setEsChilena(boolean esChilena) {
+                this.esChilena = esChilena;
+        }
+        public int getSueldo() {
+                return sueldo;
+        }
+        public void setSueldo(int sueldo) {
+                this.sueldo = sueldo;
+        }
+        public int getAntiguedadLaboral() {
+                return antiguedadLaboral;
+        }
+        public void setAntiguedadLaboral(int antiguedadLaboral) {
+                this.antiguedadLaboral = antiguedadLaboral;
+        }
+        public boolean isMorosidad() {
+                return morosidad;
+        }
+        public void setMorosidad(boolean morosidad) {
+                this.morosidad = morosidad;
+        }
+        
+        public String evaluarCredito()
+        {
+                // continuar con la actividad solcitada
+                // según los datos devolver el mensaje de aprobación o rechazo
+                // señalado en el caso.
+                if(montoCredito >= 500000 && montoCredito <= sueldo * 10)
+                {
+                        if(cuotas >= 3 && cuotas <= 84)
+                        {
+                                if(edad >= 24 && edad <= 79)
+                                {
+                                        if(esChilena)
+                                        {
+                                                if(sueldo > 250000)
+                                                {
+                                                        if(antiguedadLaboral > 3)
+                                                        {
+                                                                if(morosidad == false)
+                                                                {
+                                                                        return "--------------------------------"
+                                                                        + nombre.toUpperCase() + " " + apellido.toUpperCase() + " " + rut
+                                                                        + "--------------------------------" 
+                                                                        + "Cumple con los requisitos" 
+                                                                        + "Sueldo : " + sueldo 
+                                                                        + "Monto máximo : " + sueldo * 10 
+                                                                        + "Monto Solicitado : " + montoCredito 
+                                                                        + "Tasa Mensual : 1,46%" 
+                                                                        + "N° de Cuotas : " + cuotas 
+                                                                        + "Monto a pagar: " + (montoCredito * 1.46) ;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                return "-------------------------- \n" + nombre.toUpperCase() + " " + apellido.toUpperCase() + " "
+                + rut + "\n--------------------------\n" + "No cumple con los requisitos";
+
+
+        }
+
+        
+        
+        
+} // fin de clase
