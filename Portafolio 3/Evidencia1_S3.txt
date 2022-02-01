@@ -1,0 +1,135 @@
+3.- Crear una app, en la cual, solicite un 
+		// nombre y la edad. Que señale si es 
+		// mayor de edad o no.
+
+
+// 1.- 2 variables
+		// 2.- pedir o leer los datos ( importar Scanner)
+		// 3.- Procesar la info y mostrar
+		// w3school, google o manual de usuario.
+
+
+CORRECTO EVIDENCIA 1 SEMANA 3
+
+import java.util.Scanner;
+public class VerificarEdad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int edad;
+		String nombre = null;
+		try (Scanner teclado = new Scanner(System.in)) {
+			
+			System.out.println("***Verifica tu Mayoría de Edad***");
+			
+			System.out.println("Ingresa tu Nombre Completo: ");
+			nombre = teclado.nextLine();
+			System.out.println("Ingresa tu Edad: ");
+			edad = teclado.nextInt();
+		}
+
+		if( edad >= 18)
+		{	
+			System.out.println(nombre.toUpperCase() +" ERES MAYOR DE EDAD");
+		}
+ 		else {
+			
+ 			System.out.println(nombre +" NO eres mayor de edad");
+		}
+		
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+impor.java util.Scanner
+
+
+
+
+
+
+Proceso Verificador de Edad
+
+
+		Definir String Nombre
+		Definir Int  Edad
+		-Definir Scanner para leer- 
+
+		System.out.string("Ingrese su Nombre Completo");
+		Leer = 
+
+import java.util.Scanner;
+public class MayorDeDosNumeros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// definir las variable
+
+		string nombre
+		int edad
+		Scanner teclado = new Scanner(System.in);
+
+		System.out.println("***Verifica tu Mayoría de Edad***");
+		
+		System.out.println("Ingresa tu Nombre Completo: ");
+		nombre = teclado.nextString();
+		System.out.println("Ingresa tu Edad: ");
+		edad = teclado.nextInt();
+
+		If(edad >= 18)
+		{	
+			System.out.println(nombre.toUpperCase; +" "+ "eres mayor de edad");
+ 		else
+		{
+			System.out.println(nombre.toUpperCase; +" "+ "NO eres mayor de edad");
+		}
+		}
+}
+	
+
+
+CODIGO DE NOMBRE, APELLIDO Y EDAD GUARDADO
+
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Declarar variables
+		//para escribir en la consola usar System
+		//Actividad : solicitar nombre, apellido y la edad
+		
+		String nombre;
+		String apellido;
+		int edad;
+		
+		Scanner leer= new Scanner(System.in);
+		System.out.println("Ingrese su nombre: ");
+		nombre= leer.next();
+		System.out.println("Ingrese su apellido: ");
+		apellido= leer.next();
+		System.out.println("Ingrese su edad: ");
+		edad= leer.nextInt();
+		
+		System.out.println("Tú nombre y apellido es " + nombre.toUpperCase() + " " + apellido.toLowerCase());
+		System.out.println("Tú edad es " + edad + " años" );
+		
+		
+	}
+
+}
+
